@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_21_020832) do
     t.string "name", null: false
     t.string "description"
     t.string "url"
+    t.string "deploy_type", null: false
     t.boolean "is_active", default: true, null: false
     t.boolean "is_locked", default: false, null: false
     t.datetime "created_at", null: false

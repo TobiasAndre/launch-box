@@ -1,0 +1,22 @@
+<div class='container-md mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg p-4'>
+  <div class="flex rounded p-2 mb-2 flex-row-reverse">
+    <%= link_to new_app_path, class: "btn flex align-middle text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/> </svg>
+      <span class="flex align-middle p-[2px]">New</span>
+    <% end %>
+  </div>
+  <ul role="list" class="divide-y divide-gray-100">
+    <% @apps.each do |app| %>
+      <li class="py-4 flex">
+        <div class='max-w-md mx-auto'>
+          <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+            <%= app.name %>
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-300">
+            <%= app.description %>
+          </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

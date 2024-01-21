@@ -11,10 +11,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= render "shared/navbar" %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="bg-gray-50 dark:bg-gray-900">
+    <% if current_user.present? %>
+      <%= render "shared/navbar" %>
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+    <% else %>
+      <main>
+        <%= yield %>
+      </main>
+    <% end %>
   </body>
 </html>
