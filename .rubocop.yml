@@ -1,0 +1,19 @@
+require:
+  - rubocop-rails
+  - rubocop-factory_bot
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1.4
+  Exclude:
+    - "bin/**/*"
+    - "db/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
+    - "config/**/*"
+    - "lib/**/*"
+    - "spec/requests/**/*"
+
+Style/Documentation:
+  Enabled: false
