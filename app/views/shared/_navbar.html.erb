@@ -3,13 +3,15 @@
     <div class="relative flex h-16 items-center justify-between">
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-8 w-auto" src="https://dokku.com/assets/dokku-logo.svg" alt="Your Company">
+          <%= link_to root_path do %>
+            <img class="h-8 w-auto" src="https://dokku.com/assets/dokku-logo.svg" alt="Your Company">
+          <% end %>
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <%= link_to "Apps", apps_path, class: "text-gray-900 dark:text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
-            <%= link_to "Teams", teams_path, class: "text-gray-900 dark:text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
-            <%= link_to "Projects", projects_path, class: "text-gray-900 dark:text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" %>
+            <%= link_to "Apps", apps_path, class: "nav-button" %>
+            <%= link_to "Teams", teams_path, class: "nav-button" %>
+            <%= link_to "Projects", projects_path, class: "nav-button" %>
           </div>
         </div>
       </div>
