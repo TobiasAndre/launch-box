@@ -9,7 +9,20 @@ class ProjectsController < ApplicationController
 
   def edit; end
 
+  def create
+    @project = Project.new(project_params)
+    if @project.save
+      redirect_to projects_path, notice: 'Project was successfully created.'
+    else
+      render :new
+    end
+  end
+
   private
+
+  def project_params
+    params.require(:project).permit(:name)
+  end
 
   def list_projects
     @projects = Project.all
