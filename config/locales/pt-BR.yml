@@ -1,0 +1,16 @@
+pt-BR:
+  apps:
+    created: "Aplicativo criado com sucesso!"
+    updated: "Aplicativo atualizado com sucesso!"
+    destroyed: "Aplicativo excluído com sucesso!"
+    not_found: "Aplicativo não encontrado!"
+  teams:
+    created: "Time criado com sucesso!"
+    updated: "Time atualizado com sucesso!"
+    destroyed: "Time excluído com sucesso!"
+    not_found: "Time não encontrado!"
+  projects:
+    created: "Projeto criado com sucesso!"
+    updated: "Projeto atualizado com sucesso!"
+    destroyed: "Projeto excluído com sucesso!"
+    not_found: "Projeto não encontrado!"

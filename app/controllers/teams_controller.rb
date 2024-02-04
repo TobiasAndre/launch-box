@@ -7,16 +7,16 @@ class TeamsController < ApplicationController
 
   def new; end
 
+  def edit; end
+
   def create
     @team = Team.new(team_params)
     if @team.save
-      redirect_to teams_path, notice: 'Team was successfully created.'
+      redirect_to teams_path, notice: t('teams.created')
     else
       render :new
     end
   end
-
-  def edit; end
 
   private
 
