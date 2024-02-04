@@ -1,4 +1,4 @@
-<div class='container-md mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg p-4'>
+<div class='container-md mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg p-4 w-full md:w-2/3 lg:w-2/5'>
   <div class="flex rounded p-2 mb-2 flex-row-reverse">
     <%= link_to new_app_path, class: "btn flex align-middle text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" do %>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16"> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/> </svg>
@@ -7,14 +7,19 @@
   </div>
   <ul role="list" class="divide-y divide-gray-100">
     <% @apps.each do |app| %>
-      <li class="py-4 flex">
-        <div class='max-w-md mx-auto'>
-          <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-            <%= app.name %>
-          </p>
-          <p class="text-sm text-gray-500 dark:text-gray-300">
-            <%= app.description %>
-          </p>
+      <li class="flex p-4 bg-gray-700 cursor-pointer rounded">
+        <div class="w-full flex justify-between">
+          <div>
+            <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+              <%= app.name %>
+            </p>
+            <p class="text-sm text-gray-500 dark:text-gray-300">
+              <%= app.description %>
+            </p>
+          </div>
+          <svg class="w-5 h-5 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
+          </svg>
         </div>
       </li>
     <% end %>

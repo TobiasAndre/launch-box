@@ -2,7 +2,12 @@
 
 class AppsController < ApplicationController
   before_action :list_apps, only: %i[index]
+
   def index; end
+
+  def new; end
+
+  def update; end
 
   private
 
