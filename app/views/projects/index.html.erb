@@ -8,13 +8,13 @@
   <ul role="list" class="divide-y divide-gray-100">
     <% @projects.each do |project| %>
       <li class="flex p-4 bg-gray-700 cursor-pointer rounded">
-        <div class="w-full flex justify-between">
+        <%= link_to edit_project_path(project.id), class: 'w-full flex justify-between' do %>
           <div>
             <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
               <%= project.name %>
             </p>
           </div>
-        </div>
+        <% end %>
       </li>
     <% end %>
   </ul>
