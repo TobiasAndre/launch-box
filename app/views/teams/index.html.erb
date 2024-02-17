@@ -5,10 +5,10 @@
       <span class="flex align-middle p-[2px]">New</span>
     <% end %>
   </div>
-  <ul role="list" class="divide-y divide-gray-100">
+  <div class="divide-y divide-gray-100">
     <% @teams.each do |team| %>
-      <li class="flex p-4 bg-gray-700 cursor-pointer rounded">
-        <%= link_to edit_team_path(team.id), class: 'w-full flex justify-between' do %>
+      <%= link_to edit_team_path(team.id), class:"flex p-4 bg-gray-700 cursor-pointer rounded" do %>
+        <div class='w-full flex justify-between'>
           <div>
             <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
               <%= team.name %>
@@ -17,8 +17,8 @@
               0 members
             </p>
           </div>
-        <% end %>
-      </li>
+        </div>
+      <% end %>
     <% end %>
-  </ul>
+  </div>
 </div>
