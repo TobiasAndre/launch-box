@@ -9,6 +9,10 @@
         <%= form.label :description, class: 'label' %>
         <%= form.text_area :description, class: 'input-text', required: true %>
       </div>
+      <div class="mb-5">
+        <%= form.label :deploy_type, class: 'label' %>
+        <%= select_tag "deploy_type", options_for_select(App.enum_options_for_select("deploy_type")), include_blank: true, placeholder: 'Tipo de deploy', class: "select-tag" %>
+      </div>
       <div class="flex mt-8 justify-between gap-8">
         <%= link_to apps_path, class: 'btn-secondary' do %>
           Cancel

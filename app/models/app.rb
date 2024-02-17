@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class App < ApplicationRecord
-  enum deploy_type: { buildpack: 0, docker: 1 }
+  enum deploy_type: { buildpack: 'buildpack', docker: 'docker' }
   before_create :generate_uuid
 
   validates :name, presence: true

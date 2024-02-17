@@ -29,7 +29,7 @@ class AppsController < ApplicationController
   end
 
   def app_params
-    params.require(:app).permit(:name)
+    params.require(:app).permit(:name, :description, :deploy_type)
   end
 
   def list_apps

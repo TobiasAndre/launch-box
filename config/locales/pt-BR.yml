@@ -1,4 +1,10 @@
 pt-BR:
+  activerecord:
+    enums:
+      app:
+        deploy_types:
+          buildpack: "Buildpack"
+          docker: "Docker"
   apps:
     created: "Aplicativo criado com sucesso!"
     updated: "Aplicativo atualizado com sucesso!"
